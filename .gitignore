@@ -1,5 +1,115 @@
+﻿# ==============================
+# Python environment and cache
+# ==============================
 .venv/
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==============================
+# Environment variables / secrets
+# ==============================
 .env
+.env.*
+!.env.example
+
+# ==============================
+# Logs and temporary output
+# ==============================
+*.log
+migration_error.txt
+Microsoft/
+
+# ==============================
+# Backup files
+# ==============================
+*.backup
+*.bak
+*.before_*
+*_backup.py
+*_backup.*
+*_before_*
+
+# ==============================
+# Local databases
+# ==============================
+*.db
+*.sqlite
+*.sqlite3
+
+# ==============================
+# Downloaded SEC source data
+# ==============================
+Data/raw/
+data/raw/
+
+# ==============================
+# Generated / temporary datasets
+# ==============================
+Data/aibi_platform.db
+
+# ==============================
+# Frontend generated files
+# ==============================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Frontend historical copies
+frontend/src_backup/
+frontend/src_before_v2/
+
+# ==============================
+# Editor / operating system
+# ==============================
 .DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Additional backup files
+*_backup
+
+# Keep only the three reproducible database-loader datasets
+data/processed/*
+!data/processed/apple_financial_data_annual.csv
+!data/processed/apple_financial_data_quarterly.csv
+!data/processed/apple_balance_sheet_snapshots.csv
+
+# ==============================
+# Local diagnostics and one-time fixes
+# ==============================
+apply_fixes.py
+check_sqlite.py
+debug_postgres.py
+diagnose_kpis.py
+fix_health_query.py
+inspect*.py
+sec_inspect.py
+
+# ==============================
+# Legacy / obsolete files
+# ==============================
+load_postgres.py
+load_to_db.py
+financial_analytics_old.py
+schema.sql
+sql/knowledge_schema.sql
+
+# ==============================
+# Personal notes and outdated documentation
+# ==============================
+rest for tomorrow.txt
+frontend/README.md
+frontend/src/README.txt
+
+# ==============================
+# Unused starter frontend assets
+# ==============================
+frontend/src/assets/hero.png
+frontend/src/assets/react.svg
+frontend/src/assets/vite.svg
